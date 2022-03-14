@@ -85,28 +85,30 @@ export default function Main() {
       <Container maxWidth="lg">
         <StyledContainer>
           <Grid container spacing={3}>
-            <Grid item>
-              <StyledContainer>
-                <TextField
-                  type="text"
-                  label="New URL"
-                  value={text}
-                  onChange={inputHandler}
-                />
-              </StyledContainer>
-              <StyledContainer display="inline">
-                <Button
-                  onClick={copy}
-                  disabled={!text}
-                  type="button"
-                  color="success"
-                  variant="contained"
-                  startIcon={<ContentCopyIcon />}
-                >
-                  Copy
-                </Button>
-              </StyledContainer>
-            </Grid>
+            <Container>
+              <Grid item>
+                <StyledContainer>
+                  <TextField
+                    type="text"
+                    label="New URL"
+                    value={text}
+                    onChange={inputHandler}
+                  />
+                </StyledContainer>
+                <StyledContainer display="inline">
+                  <Button
+                    onClick={copy}
+                    disabled={!text}
+                    type="button"
+                    color="success"
+                    variant="contained"
+                    startIcon={<ContentCopyIcon />}
+                  >
+                    Copy
+                  </Button>
+                </StyledContainer>
+              </Grid>
+            </Container>
           </Grid>
         </StyledContainer>
       </Container>
